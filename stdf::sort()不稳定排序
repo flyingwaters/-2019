@@ -1,0 +1,12 @@
+这个时候可以使用std::stable_sort()来实现稳定的排序了：
+Sorts the elements in the range [first,last) into ascending order, 
+like sort, but stable_sort preserves the relative order of the elements with equivalent values.
+
+std::sort() 不稳定排序～。
+
+sort函数有以下特征：
+1. 要求输入一个范围[first, last)
+2. 随机迭代器，能用此算法的容器是支持随机访问的容器：vector, deque, string。
+3.第一个版本使用operator<进行比较，默认升序排序，第二个版本使用comp做比较
+
+随机访问的容器～～～随机迭代器：：
