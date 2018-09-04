@@ -1,0 +1,16 @@
+
+给定一个整数sum，从有N个无序元素的数组中寻找元素a、b、c、d，使得 a+b+c+d =sum，最快的平均时间复杂度是____。
+
+我们先从设计2sum的O(n)算法开始解释算法思想。
+2sum也就是找a+b=sum,
+2 sum 的O(n) 算法:
+开hashtable,
+for every element i in array，hashtable[i] 设置True.
+检查hashtable[sum-i],是否为true。
+hashtable的插入和搜索都是O(1),所以最后复杂度是O(n)
+
+所以很自然的，
+对4 sum问题，也就是a+b+c+d，我们有O(n^2) 算法:
+枚举元素求得 n^2个数字。
+for every pair of numbers c,d 对hashtable[(c+d)]添加 tuple(c,d)
+然后对每个元素检查 hashtable[sum-(c+d)]是否有数字 
